@@ -1,0 +1,40 @@
+/*
+Theme Name: MK System
+Theme URI: http://mksystemsoft.com/
+Author: Julio Maturrano
+Author URI: 
+Template: dazzling
+Version: 0.1
+Tags: black, gray, red, white, one-column, two-columns, right-sidebar,fixed-layout,light,front-page-post-form,full-width-template,rtl-language-support,sticky-post,theme-options,responsive-layout, custom-background, custom-menu, editor-style, featured-images, threaded-comments, translation-ready, photoblogging, accessibility-ready
+Text Domain: mksystem
+This Theme is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import url('../dazzling/style.css');
+/*
+Aquí empieza la personalización del tema
+---------------------------------------------------------------------------------
+*/
+.mk-header{
+	background: #000;
+}
+.mk-header-menu{
+	background: #FFF;
+}
+.navbar-default .navbar-brand {
+    color: #FFF;
+}
+#secondary{
+	display: none;
+}
+.social-icon li{
+	font-size: 35px; 
+	list-style: none;
+	display: inline-block;
+	color:#FFF;
+	padding: 3px 8px 0 11px;
+}
+.mk-buscador{
+	padding: 9px 1px 3px 18px;
+}
