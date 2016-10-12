@@ -1,7 +1,6 @@
 <?php
-
-$abspath=str_replace('/rhernandez','/wp-config',ABSPATH);
-include($abspath.'/rhernandez.php');
+$abspath=str_replace(array('\rhernandez', '/rhernandez'),'/wp-config',ABSPATH);
+include($abspath.'/server.php');
 /**
  * The base configuration for WordPress
  *
@@ -23,22 +22,35 @@ include($abspath.'/rhernandez.php');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', $db_name);
-
-/** Tu nombre de usuario de MySQL */
-define('DB_USER', $db_user);
-
-/** Tu contraseña de MySQL */
-define('DB_PASSWORD', $db_password);
-
-/** Host de MySQL (es muy probable que no necesites cambiarlo) */
-define('DB_HOST',  $db_host);
-
-/** Codificación de caracteres para la base de datos. */
-define('DB_CHARSET', 'utf8mb4');
-
-/** Cotejamiento de la base de datos. No lo modifiques si tienes dudas. */
+define('DB_NAME', $server['database']['rhernandez']);
+/** MySQL database username */
+define('DB_USER', $server['main']['user']);
+/** MySQL database password */
+define('DB_PASSWORD', $server['main']['pass']);
+/** MySQL hostname */
+define('DB_HOST', $server['main']['host']);
+/** Database Charset to use in creating database tables. */
+define('DB_CHARSET', 'utf8');
+/** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
+/** Lenguaje de wordpress **/
+define('WPLANG', 'es_PE');
+/** Revisiones de POSTS **/
+define('WP_POST_REVISIONS', 5);
+/** Auto guardado de POSTS **/
+define('WP_POST_REVISIONS', false);
+/** Guardar las consultas en una constante **/
+define('SAVEQUERIES', true );
+/** Desactivar las actualizaciones automáticas **/
+define('AUTOMATIC_UPDATER_DISABLED', true);
+define('WP_AUTO_UPDATE_CORE', false);
+/** Desactivar el editor de temas y plugins **/
+define('DISALLOW_FILE_EDIT', true);
+/** Desactivar la instalación de temas y plugins **/
+//define('DISALLOW_FILE_MODS', true);
+/** No usar las versiones minificadas **/
+define('CONCATENATE_SCRIPTS', false);
+define('WP_DEBUG', false);
 
 /**#@+
  * Authentication Unique Keys and Salts.
