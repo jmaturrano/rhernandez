@@ -20,9 +20,14 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+
+<!-- ==============DIV PAGE============  -->
 <div id="page" class="hfeed site">
 
 <nav class="navbar navbar-default" role="navigation">
+
+<!-- init mk-header -->
 	<div class="mk-header">
 		<div class="container">
 			<div class="row">
@@ -52,6 +57,9 @@
 		</div>
 
 	</div>
+<!-- fin mk-header -->
+
+
 	<nav class="navbar navbar-default" role="navigation">
 	<div 
 		<div class="container">
@@ -69,7 +77,21 @@
 
 		</div>
 
+
+
+
+
+
+
+
+
+
+
 	</div>
+
+<!-- ==============FIN PAGE============  -->
+
+
 		
 			<div class="navbar-header col-md-12 ">
 			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -122,4 +144,25 @@
                         $layout_class = of_get_option( 'site_layout' );
                 }
                 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div class="row <?php echo $layout_class; ?>">
+
+
+                
