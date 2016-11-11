@@ -6,14 +6,13 @@
  *
  * @package dazzling
  */
-
 get_header(); ?>
 	<div id="primary" class="content-area col-sm-12 col-md-12">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'page' ); ?>
+				<?php get_template_part( 'content', 'nosotros' ); ?>
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template
