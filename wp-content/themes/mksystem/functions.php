@@ -150,6 +150,120 @@ function mksystem_customizer_register( $wp_customize ) {
   
 
 
+/*
+  *
+  *
+  * SERVICIOS
+  *
+  */
+
+  $wp_customize->add_section(
+        'mksystem_servicios',
+        array(
+            'title' => __('Página Servicios', 'mksystem'),
+            'priority' => 100
+        )
+    );
+  
+  // titulo 1
+  $wp_customize->add_setting('servicios_titulo1',array(
+    'default' => __('','mksystem')
+  ));
+  
+  $wp_customize->add_control('servicios_titulo1',array(
+    'label' => __('Título 1','mksystem'),
+    'section' => 'mksystem_servicios',
+    'setting' => 'servicios_titulo1',
+    'type'    => 'text'
+  ));
+  
+  //text area 1
+   $wp_customize->add_setting('servicios_texto1',array(
+    'default' => __('','mksystem')
+  ));
+  $wp_customize->add_control('servicios_texto1',array(
+    'label' => __('Texto 1','mksystem'),
+    'section' => 'mksystem_servicios',
+    'setting' => 'servicios_texto1',
+    'type'    => 'textarea'
+  ));
+  //imagen 1
+  $wp_customize->add_setting('servicios_imagen1',array(
+    'default' => ''
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'servicios_imagen1' , array(
+    'label' => __('Imagen 1' , 'mksystem'),
+    'section' => 'mksystem_servicios',
+    'settings' => 'servicios_imagen1'
+  )));
+
+
+
+  // titulo 2
+  $wp_customize->add_setting('servicios_titulo2',array(
+    'default' => __('','mksystem')
+  ));
+  
+  $wp_customize->add_control('servicios_titulo2',array(
+    'label' => __('Título 2','mksystem'),
+    'section' => 'mksystem_servicios',
+    'setting' => 'servicios_titulo2',
+    'type'    => 'text'
+  ));
+  
+  //text area 2
+   $wp_customize->add_setting('servicios_texto2',array(
+    'default' => __('','mksystem')
+  ));
+  $wp_customize->add_control('servicios_texto2',array(
+    'label' => __('Texto 2','mksystem'),
+    'section' => 'mksystem_servicios',
+    'setting' => 'servicios_texto2',
+    'type'    => 'textarea'
+  ));
+  //imagen 2
+  $wp_customize->add_setting('servicios_imagen2',array(
+    'default' => ''
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'servicios_imagen2' , array(
+    'label' => __('Imagen 2' , 'mksystem'),
+    'section' => 'mksystem_servicios',
+    'settings' => 'servicios_imagen2'
+  )));
+
+  
+
+  // titulo 3
+  $wp_customize->add_setting('servicios_titulo3',array(
+    'default' => __('','mksystem')
+  ));
+  
+  $wp_customize->add_control('servicios_titulo3',array(
+    'label' => __('Título 3','mksystem'),
+    'section' => 'mksystem_servicios',
+    'setting' => 'servicios_titulo3',
+    'type'    => 'text'
+  ));
+  
+  //text area 3
+   $wp_customize->add_setting('servicios_texto3',array(
+    'default' => __('','mksystem')
+  ));
+  $wp_customize->add_control('servicios_texto3',array(
+    'label' => __('Texto 3','mksystem'),
+    'section' => 'mksystem_servicios',
+    'setting' => 'servicios_texto3',
+    'type'    => 'textarea'
+  ));
+  //imagen 3
+  $wp_customize->add_setting('servicios_imagen3',array(
+    'default' => ''
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'servicios_imagen3' , array(
+    'label' => __('Imagen 3' , 'mksystem'),
+    'section' => 'mksystem_servicios',
+    'settings' => 'servicios_imagen3'
+  )));
 
 
 }
