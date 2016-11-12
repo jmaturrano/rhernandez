@@ -31,16 +31,17 @@
 	<div class="mk-header">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8">
-					<div id="logo">
-						<span class="site-title">
-						<a class="navbar-brand" href="http://localhost/mksystem/pjrrhernandez/rhernandez/" title="Servicios Profesionales" rel="home">Ronald Hernandez</a>
-						</span>
+				<div class="col-md-4">
+					<div class="title-logo text-center">
+						
+						<a class="" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">
+							<h1><?php bloginfo( 'name' ); ?></h1>
+						</a>
 
 					</div>
 
 				</div>
-				<div class="col-md-4 social-icon">
+				<div class="col-md-8 social-icon">
 					<ul>
 						<li><i class="fa fa-facebook-official" aria-hidden="true"></i></li>
 						<li><i class="fa fa-youtube" aria-hidden="true"></i></li>
