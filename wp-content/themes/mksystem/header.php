@@ -38,7 +38,49 @@
 							<h1><?php bloginfo( 'name' ); ?></h1>
 						</a>
 
+
+
+<!-- boton desplegable -->
+
+            			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			    <span class="sr-only">Cambiar navegación</span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			  </button>
+
+				
+
+				
+			</div>
+
+
+<!-- boton desplegable -->
+
+
+
+
+
+
+
+						
+
 					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 				</div>
 				<div class="col-md-8 social-icon">

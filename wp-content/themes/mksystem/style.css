@@ -157,3 +157,17 @@ padding-left: 0px;
 .nav.navbar-nav {
     float: left!important;
 }
+
+
+.navbar-toggle {
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    float: right;
+    margin-bottom: -31px;
+    margin-right: 17px;
+    margin-top: -29px;
+    padding: 9px 10px;
+    position: relative;
+}
