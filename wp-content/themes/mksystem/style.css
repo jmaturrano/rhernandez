@@ -36,7 +36,7 @@ Aquí empieza la personalización del tema
 	padding: 3px 8px 0 11px;
 }
 .mk-buscador{
-	padding: 9px 1px 3px 18px;
+	padding: 17px 1px 0px 18px;
 }
 
 
@@ -103,15 +103,57 @@ Aquí empieza la personalización del tema
 
 
 /* titulo - logo que cubre col-md-8 */
-.social-icon li{
+.social-icon li {
 	float: right;
 	margin-top: 10px;
 }
 
+
+/*  cumple una funcion
 .social-icon li:hover{
+	color: white!important;
+}*/
+
+
+
+
+
+/*color iconos con enlace*/
+
+.social-icon li a{
+	color:#A2A5A5;
+}
+
+
+.social-icon li a:hover{
 	color: white!important;
 }
 
-.navbar.navbar-default{
+
+
+
+/*ayuda a que no descuadre search y menu */
+
+.navbar .navbar-default{
 	margin: 0;
+}
+
+
+
+.menu-principal
+{
+
+}
+
+
+
+.navbar-nav li{
+
+padding-left: 0px;
+}
+
+
+
+.nav.navbar-nav {
+    float: left!important;
 }

@@ -43,10 +43,42 @@
 				</div>
 				<div class="col-md-8 social-icon">
 					<ul>
-						<li><i class="fa fa-facebook-official" aria-hidden="true"></i></li>
-						<li><i class="fa fa-youtube" aria-hidden="true"></i></li>
-						<li><i class="fa fa-twitter" aria-hidden="true"></i></li>
-						<li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+						<li>
+						<a href="https://facebook.com" target="_blank" >
+						<i class="fa fa-facebook-official" aria-hidden="true"></i>
+						</a>						
+						</li>
+						<li>
+						<a href="https://youtube.com" target="_blank" >
+						<i class="fa fa-youtube" aria-hidden="true"></i>
+						</a>
+
+						</li>
+						
+						
+
+						<li>
+						<a href="https://twitter.com" target="_blank" >
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+						</a>
+
+
+
+
+						</li>
+						<li>
+						
+
+
+						<a href="https://instagram.com" target="_blank" >
+						<i class="fa fa-instagram" aria-hidden="true"></i>
+						</a>
+
+
+
+
+
+						</li>
 
 					</ul>
 

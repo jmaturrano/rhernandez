@@ -19,8 +19,8 @@ get_header(); ?>
 
 <div id="contenedor_post">
 
-<?php query_posts('cat=5&paged='. $paged); ?>
-<h2 style="text-align:center;"  >POST PUBLICADOS</h2>
+<?php query_posts('cat=7&paged='. $paged); ?>
+<h2 style="text-align:center;"  ></h2>
 
 
 
