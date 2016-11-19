@@ -33,106 +33,46 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="title-logo text-center">
-						
-						<a class="" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">
-							<h1><?php bloginfo( 'name' ); ?></h1>
-						</a>
 
+					<?php if( get_header_image() != '' ) : ?>
 
+							<div id="logo">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>"  height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
+							</div><!-- end of #logo -->
 
-<!-- boton desplegable -->
+					<?php endif; // header image was removed ?>
 
-            			<div class="navbar-header">
-			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-			    <span class="sr-only">Cambiar navegación</span>
-			    <span class="icon-bar"></span>
-			    <span class="icon-bar"></span>
-			    <span class="icon-bar"></span>
-			  </button>
+					<?php if( !get_header_image() ) : ?>
 
-				
+							<?php /*$description = get_bloginfo( 'description', 'display' );
+				            if ( $description || is_customize_preview() ) : ?>
+				                    <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+				            <?php /*endif; */ ?>
+							<a class="" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">
+								<h1><?php bloginfo( 'name' ); ?></h1>
+							</a>
 
-				
-			</div>
+				<?php endif; // header image was removed (again) ?>
 
-
-<!-- boton desplegable -->
-
-
-
-
-
-
-
-
-
-		</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+				<!-- boton desplegable -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+									<span class="sr-only">Cambiar navegación</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>				
+							</div>
+				<!-- boton desplegable -->
+					</div><!--.title-logo-->
+				</div><!--.col-md-4-->
+				<?php devit_social_icons(); ?>
+				<div class=" mk-header-menu col-md-8">
+					<?php devit_header_menu(); ?>
 				</div>
-				<div class="col-md-8 social-icon">
-					<ul>
-						<li>
-						<a href="https://facebook.com" target="_blank" >
-						<i class="fa fa-facebook-official" aria-hidden="true"></i>
-						</a>						
-						</li>
-						<li>
-						<a href="https://youtube.com" target="_blank" >
-						<i class="fa fa-youtube" aria-hidden="true"></i>
-						</a>
-
-						</li>
-						
-						
-
-						<li>
-						<a href="https://twitter.com" target="_blank" >
-						<i class="fa fa-twitter" aria-hidden="true"></i>
-						</a>
-
-
-
-
-						</li>
-						<li>
-						
-
-
-						<a href="https://instagram.com" target="_blank" >
-						<i class="fa fa-instagram" aria-hidden="true"></i>
-						</a>
-
-
-
-
-
-						</li>
-
-					</ul>
-
-				</div>
-				
-
-			</div>
-
-		</div>
-
-	</div>
-<!-- fin mk-header -->
+			</div><!--.row-->
+		</div><!--.container-->
+	</div><!--.mk-header-->
 
 
 	<nav class="navbar navbar-default" role="navigation">
@@ -140,9 +80,7 @@
 		<div class="container">
 			<div class="row">
 				<div >
-					<div class=" mk-header-menu col-md-8">
-						<?php dazzling_header_menu(); ?>
-					</div>
+
 
 					<div class=" mk-header-menu col-md-4 mk-buscador">
 						<?php get_search_form(); ?>
@@ -176,23 +114,7 @@
 			    <span class="icon-bar"></span>
 			  </button>
 
-				<?php if( get_header_image() != '' ) : ?>
 
-					<div id="logo">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>"  height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
-					</div><!-- end of #logo -->
-
-				<?php endif; // header image was removed ?>
-
-				<?php if( !get_header_image() ) : ?>
-
-					<?php $description = get_bloginfo( 'description', 'display' );
-            if ( $description || is_customize_preview() ) : ?>
-                    <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-            <?php
-            endif; ?>
-
-				<?php endif; // header image was removed (again) ?>
 
 				<!-- menu -->
 				

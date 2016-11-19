@@ -269,3 +269,88 @@ function mksystem_customizer_register( $wp_customize ) {
 }
 
 add_action('customize_register','mksystem_customizer_register');
+
+
+
+function devit_social_icons(){
+  $social_facebook = 'http://facebook.com';
+  $social_twitter = 'http://twitter.com';
+  $social_youtube = 'http://youtube.com';
+  $social_instagram = 'http://instagram.com';
+  $social_googleplus = 'http://googleplus.com';
+  $social_linkedin = 'http://linkedin.com';
+  ?>
+        <div class="col-md-8 social-icon">
+          <ul>
+            <?php if($social_facebook != ''): ?>
+            <li>
+              <a href="<?= $social_facebook; ?>" target="_blank" >
+                <i class="fa fa-facebook-official"></i>
+              </a>
+            </li>
+            <?php endif; ?>
+
+            <?php if($social_twitter != ''): ?>
+            <li>
+              <a href="<?= $social_twitter; ?>" target="_blank" >
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li>
+            <?php endif; ?>
+
+            <?php if($social_youtube != ''): ?>
+            <li>
+              <a href="<?= $social_youtube; ?>" target="_blank" >
+                <i class="fa fa-youtube"></i>
+              </a>
+            </li>
+            <?php endif; ?>
+
+            <?php if($social_instagram != ''): ?>
+            <li>
+              <a href="<?= $social_instagram; ?>" target="_blank" >
+                <i class="fa fa-instagram"></i>
+              </a>
+            </li>
+            <?php endif; ?>
+
+            <?php if($social_googleplus != ''): ?>
+            <li>
+              <a href="<?= $social_googleplus; ?>" target="_blank" >
+                <i class="fa fa-google-plus"></i>
+              </a>
+            </li>
+            <?php endif; ?>
+
+            <?php if($social_linkedin != ''): ?>
+            <li>
+              <a href="<?= $social_linkedin; ?>" target="_blank" >
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </li>
+            <?php endif; ?>
+
+          </ul>
+        </div>
+  <?php
+}
+
+
+
+
+/**
+ * header menu (should you choose to use one)
+ */
+function devit_header_menu() {
+  // display the WordPress Custom Menu if available
+  wp_nav_menu(array(
+    'menu'              => 'primary',
+    'theme_location'    => 'primary',
+    'depth'             => 2,
+    'container'         => 'div',
+    'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
+    'menu_class'        => 'nav navbar-nav',
+    'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+    'walker'            => new wp_bootstrap_navwalker()
+  ));
+} /* end header menu */
