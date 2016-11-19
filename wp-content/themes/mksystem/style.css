@@ -150,6 +150,7 @@ Aquí empieza la personalización del tema
 .navbar-nav li{
 
 padding-left: 0px;
+
 }
 
 
@@ -170,4 +171,27 @@ padding-left: 0px;
     margin-top: -29px;
     padding: 9px 10px;
     position: relative;
+}
+
+
+
+
+/*PARA CAMBIAR EL FOCUS DE UN BOTON DEL MENU,es necesario colocarme seguido de coma
+su hover ,de lo contrario no funciona solos*/
+
+.navbar-default .navbar-nav li  a:focus,
+.navbar-default .navbar-nav li  a:hover
+ {
+color: #6B6B6B!important;
+  background-color: #f8f8f8!important;
+}
+
+
+
+
+
+/* el place holder del search*/
+.form-control::-moz-placeholder {
+    color: #1dd2e2!important;
+    opacity: 1;
 }
