@@ -4,15 +4,17 @@
  *
  * This is the template that displays full width page without sidebar
  *
- * @package dazzling
+ * @package devit
  */
 get_header(); ?>
-	<div id="primary" class="content-area col-sm-12 col-md-12">
+
+<div id="content" class="site-content container">
+	<div id="primary" class="content-area row">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'nosotros' ); ?>
+				<?php get_template_part( 'contents/content', 'nosotros' ); ?>
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template
