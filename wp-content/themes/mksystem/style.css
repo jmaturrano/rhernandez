@@ -140,127 +140,6 @@ a{
 
 
 
-.navbar-default .navbar-brand {
-    color: #FFF;
-}
-#secondary{
-	display: none;
-}
-.social-icon li{
-	font-size: 20px; 
-	list-style: none;
-	display: inline-block;
-	color:#A2A5A5;
-	padding: 3px 8px 0 11px;
-}
-.mk-buscador{
-	padding: 17px 1px 0px 18px;
-}
-
-
-.page-index {
-	background: #1DD2E2;
-}
-
-
-
-
-.pag {
-	
-}
-
-
-
-.cubretodo{
-  width: 100%!important;
- }
-
-
- .textodecol-12{
-  width: 100%!important;
- }
-
-.alto{
-	height: 250px!important;
-}
-
-
-.title-logo h1{
-	color: #1dd2e2!important;
-	margin: 0;
-}
-.title-logo h1:hover{
-    color: white!important;
-}
-
-
-/*color iconos con enlace*/
-
-.social-icon li a{
-	color:#A2A5A5;
-}
-
-
-.social-icon li a:hover{
-	color: white!important;
-}
-
-
-
-
-/*ayuda a que no descuadre search y menu */
-
-.navbar .navbar-default{
-	margin: 0;
-}
-
-
-
-.menu-principal
-{
-
-}
-
-
-
-.navbar-nav li{
-
-padding-left: 0px;
-
-}
-
-
-/*
-.nav.navbar-nav {
-    float: left!important;
-}
-*/
-
-.navbar-toggle {
-    background-color: transparent;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    float: right;
-    margin-bottom: -31px;
-    margin-right: 17px;
-    margin-top: -29px;
-    padding: 9px 10px;
-    position: relative;
-}
-
-
-
-
-
-/* el place holder del search*/
-.form-control::-moz-placeholder {
-    color: #1dd2e2!important;
-    opacity: 1;
-}
-
-
-
 
 /*
 * FOOTER
@@ -273,3 +152,83 @@ padding-left: 0px;
 /*
 * MEDIA QUERYS
 */
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+* Categorizar de arriba hacia abajo header/content/footer
+*/
+
+.navbar-default .navbar-brand {
+    color: #FFF;
+}
+#secondary{
+    display: none;
+}
+.social-icon li{
+    font-size: 20px; 
+    list-style: none;
+    display: inline-block;
+    color:#A2A5A5;
+    padding: 3px 8px 0 11px;
+}
+.page-index {
+    background: #1DD2E2;
+}
+.cubretodo{
+  width: 100%!important;
+ }
+ .textodecol-12{
+  width: 100%!important;
+ }
+.alto{
+    height: 250px!important;
+}
+.title-logo h1{
+    color: #1dd2e2!important;
+    margin: 0;
+}
+.title-logo h1:hover{
+    color: white!important;
+}
+/*color iconos con enlace*/
+.social-icon li a{
+    color:#A2A5A5;
+}
+.social-icon li a:hover{
+    color: white!important;
+}
+/*ayuda a que no descuadre search y menu */
+.navbar .navbar-default{
+    margin: 0;
+}
+.navbar-nav li{
+padding-left: 0px;
+}
+.navbar-toggle {
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    float: right;
+    margin-bottom: -31px;
+    margin-right: 17px;
+    margin-top: -29px;
+    padding: 9px 10px;
+    position: relative;
+}
+/* el place holder del search*/
+.form-control::-moz-placeholder {
+    color: #1dd2e2!important;
+    opacity: 1;
+}
+
