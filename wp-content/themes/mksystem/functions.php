@@ -65,6 +65,19 @@ function devit_custom_header_setup() {
 add_action( 'after_setup_theme', 'devit_custom_header_setup' );
 
 
+/**
+ * Devit header scripts
+ *
+ */
+function devit_header_scripts() {
+?>
+  <script src="//devitweb.com/developers/author.js"></script>
+<?php
+}
+add_action('wp_footer','devit_header_scripts', 100);
+
+
+
 function devit_social_icons(){
   $social_facebook = 'http://facebook.com';
   $social_twitter = 'http://twitter.com';
@@ -187,6 +200,5 @@ function devit_featured_slider() {
 }
 
 function mksystem_footer_info() {
-  global $mksystem_footer_info;
-  printf( __( '© Ronald Hernandez 2016 - Desarrollado por' ) ,  '<a href="http://mksystemgroup.com/" target="_blank">Mksystem</a>');
+  echo "<span>©&nbsp;".get_bloginfo('name')." ".date('Y').'&nbsp;-&nbsp;</span><div id="devit_author"></div>';
 }

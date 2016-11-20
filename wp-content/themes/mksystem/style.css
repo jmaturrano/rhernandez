@@ -64,6 +64,7 @@ a{
     background: #0198AB;
 }
 
+
 /*
 * HEADER
 */
@@ -160,7 +161,17 @@ a{
 /*
 * FOOTER
 */
-
+.copyright{
+    float: left;
+    text-align: left;
+}
+.copyright > span, 
+.copyright > div{
+    display: inline-block;
+}
+#footer-area a:hover{
+    color: #0198AB;
+}
 
 
 
