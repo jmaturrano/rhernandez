@@ -53,7 +53,7 @@
 					<!-- boton desplegable -->
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-								<span class="sr-only">Cambiar navegación</span>
+								<span class="sr-only">Navigation</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
@@ -74,93 +74,7 @@
 			</div><!--.row-->
 		</div><!--.container-->
 	</div><!--.mk-header-->
-
-
-	<nav class="navbar navbar-default" role="navigation">
-	<div 
-		<div class="container">
-			<div class="row">
-				<div >
-
-
-					<div class=" mk-header-menu col-md-4 mk-buscador">
-						<?php get_search_form(); ?>
-					</div>
-				</div>
-		</div>
-
-		</div>
-
-
-
-
-
-
-
-
-
-
-
-	</div>
-
-<!-- ==============FIN PAGE============  -->
-
-
-		
-			<div class="navbar-header col-md-12 ">
-			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-			    <span class="sr-only"><?php _e( 'Toggle navigation', 'dazzling' ); ?></span>
-			    <span class="icon-bar"></span>
-			    <span class="icon-bar"></span>
-			    <span class="icon-bar"></span>
-			  </button>
-
-
-
-				<!-- menu -->
-				
-				
-
-	</nav><!-- .site-navigation -->
-
-        <div class="top-section">
-		<?php dazzling_featured_slider(); ?>
-		<?php dazzling_call_for_action(); ?>
-        </div>
-        <div id="content" class="site-content container">
-
-            <div class="container main-content-area"><?php
-
-                global $post;
-                if( get_post_meta($post->ID, 'site_layout', true) ){
-                        $layout_class = get_post_meta($post->ID, 'site_layout', true);
-                }
-                else{
-                        $layout_class = of_get_option( 'site_layout' );
-                }
-                if( is_home() && is_sticky( $post->ID ) ){
-                        $layout_class = of_get_option( 'site_layout' );
-                }
-                ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <div class="row <?php echo $layout_class; ?>">
+</nav><!-- .site-navigation -->
 
 
                 

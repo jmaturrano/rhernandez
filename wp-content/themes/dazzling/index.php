@@ -8,10 +8,34 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package dazzling
+ * @package devit
  */
 
 get_header(); ?>	
+
+<div class="top-section">
+hola 1
+<?php devit_featured_slider(); ?>
+<?php dazzling_call_for_action(); ?>
+hola 2
+</div>
+<div id="content" class="site-content container">
+
+    <div class="container main-content-area"><?php
+
+        global $post;
+        if( get_post_meta($post->ID, 'site_layout', true) ){
+                $layout_class = get_post_meta($post->ID, 'site_layout', true);
+        }
+        else{
+                $layout_class = of_get_option( 'site_layout' );
+        }
+        if( is_home() && is_sticky( $post->ID ) ){
+                $layout_class = of_get_option( 'site_layout' );
+        }
+        ?>
+
+        <div class="row <?php echo $layout_class; ?>">
 
         <div id="primary" class="content-area col-sm-12 col-md-8">
                 <main id="main" class="site-main" role="main">

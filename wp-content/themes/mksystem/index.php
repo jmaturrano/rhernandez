@@ -8,57 +8,61 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package dazzling
+ * @package devit
  */
 
 get_header(); ?>	
 
+<div class="top-section">
+	<?php devit_featured_slider(); ?>
+	<?php dazzling_call_for_action(); ?>
+</div>
+<div id="content" class="site-content container">
 
+    <div class="container main-content-area"><?php
 
-
-
-<div id="contenedor_post">
-
-<?php query_posts('cat=7&paged='. $paged); ?>
-<h2 style="text-align:center;"  ></h2>
-
-
-
-<!-- init while -->
-
-
-<?php while (have_posts()) : the_post();?>
-
-<div id="post <?php  the_ID(); ?>" class="content-area col-sm-4 col-md-4">
-
-
-
-      <?php get_template_part( 'content', '' ); ?>
-      <?php
-          // If comments are open or we have at least one comment, load up the comment template
-          if ( comments_open() || '0' != get_comments_number() ) :
-            comments_template();
-
-
-          endif;
+        global $post;
+        if( get_post_meta($post->ID, 'site_layout', true) ){
+                $layout_class = get_post_meta($post->ID, 'site_layout', true);
+        }
+        else{
+                $layout_class = of_get_option( 'site_layout' );
+        }
+        if( is_home() && is_sticky( $post->ID ) ){
+                $layout_class = of_get_option( 'site_layout' );
+        }
         ?>
-</div>
 
-<?php endwhile; ?>
+        <div class="row <?php echo $layout_class; ?>">
 
-<!-- fin while -->
+        <div id="primary" class="content-area col-sm-12 col-md-8">
+                <main id="main" class="site-main" role="main">
 
+                <?php if ( have_posts() ) : ?>
 
-</div>
+                        <?php /* Start the Loop */ ?>
+                        <?php while ( have_posts() ) : the_post(); ?>
 
+                                <?php
+                                        /* Include the Post-Format-specific template for the content.
+                                         * If you want to override this in a child theme, then include a file
+                                         * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                                         */
+                                        get_template_part( 'content', get_post_format() );
+                                ?>
 
+                        <?php endwhile; ?>
 
+                        <?php dazzling_paging_nav(); ?>
 
+                <?php else : ?>
 
+                        <?php get_template_part( 'content', 'none' ); ?>
 
-    
+                <?php endif; ?>
 
-<!-- ESTE SIDEBAR ES COMO UNA COLUMNA PERO AL SER LLAMADO Y NO TENER CONTENIDO NO MUESTRA -->
+                </main><!-- #main -->
+        </div><!-- #primary -->
+
 <?php get_sidebar(); ?>
-
 <?php get_footer(); ?>
