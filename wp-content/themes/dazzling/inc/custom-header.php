@@ -24,6 +24,7 @@
  *
  * @package dazzling
  */
+
 function dazzling_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'dazzling_custom_header_args', array(
 		'default-image'          => '',

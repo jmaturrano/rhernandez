@@ -16,17 +16,71 @@ Use it to make something cool, have fun, and share what you've learned with othe
 Aquí empieza la personalización del tema
 ---------------------------------------------------------------------------------
 */
-.mk-header{
-	background: #000;
+
+
+/*
+* THEME DEFAULT
+*/
+.btn-default, .label-default{
+    background-color: #0198AB;
+    border-color: #0198AB;
 }
+a{
+    color: #0198AB;
+}
+
+/*
+* HEADER
+*/
+.mk-header{
+    background: #000;
+    padding: 10px 0px;
+}
+/* logo */
+#logo img{
+    max-width: 200px;
+}
+.title-logo{    
+    padding: 10px 0px;
+}
+/* search */
+.custom-form .form-search{
+    padding: 5px 0 0;
+}
+.custom-form .form-group{
+    margin-bottom: 10px;
+}
+/* nav bar menu */
 #menu-principal.nav.navbar-nav{
     float: right;
 }
-/*
-.mk-header-menu{
-	background: #FFF;
+.mk-header-menu li a{
+    text-transform: uppercase;
 }
-*/
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus, 
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus, 
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus, 
+.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:focus, 
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, 
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus{
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.dropdown-menu > li > a:hover, 
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover{
+    color: #0198AB;
+}
+
+
+
 .navbar-default .navbar-brand {
     color: #FFF;
 }
@@ -71,31 +125,6 @@ Aquí empieza la personalización del tema
 	height: 250px!important;
 }
 
-/* funcion over,cambie color 
-
-.titulo{
-    color: #1dd2e2;
-    float: left;
-    font-size: 21px;
-    height: 50px;
-    line-height: 37px;
-    padding: 15px;
-}
-.titulo:hover{
-    color: white;
-}
-
-
-*/
-
-
-
-/* titulo - logo que cubre col-md-4 */
-.title-logo{
-	
-	padding: 25px 0px;
-}
-
 
 .title-logo h1{
 	color: #1dd2e2!important;
@@ -104,23 +133,6 @@ Aquí empieza la personalización del tema
 .title-logo h1:hover{
     color: white!important;
 }
-
-
-
-/* titulo - logo que cubre col-md-8 */
-.social-icon li {
-	float: right;
-	margin-top: 10px;
-}
-
-
-/*  cumple una funcion
-.social-icon li:hover{
-	color: white!important;
-}*/
-
-
-
 
 
 /*color iconos con enlace*/
@@ -181,25 +193,24 @@ padding-left: 0px;
 
 
 
-/*PARA CAMBIAR EL FOCUS DE UN BOTON DEL MENU,es necesario colocarme seguido de coma
-su hover ,de lo contrario no funciona solos*/
-
-.navbar-default .navbar-nav li  a:focus,
-.navbar-default .navbar-nav li  a:hover
- {
-color: #6B6B6B!important;
-  background-color: #f8f8f8!important;
-}
-
-
-
-
 
 /* el place holder del search*/
 .form-control::-moz-placeholder {
     color: #1dd2e2!important;
     opacity: 1;
 }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus{
-    background-color: transparent;
-}
+
+
+
+
+/*
+* FOOTER
+*/
+
+
+
+
+
+/*
+* MEDIA QUERYS
+*/
