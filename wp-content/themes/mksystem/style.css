@@ -104,6 +104,39 @@ a{
     border: 0;
     margin: 0;
 }
+/* slider */
+.flex-caption.custom-caption{
+    bottom: auto;
+    top: 0;
+}
+.flex-caption.custom-caption > div{
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin: 0 auto;
+    padding: 12px;
+    width: 600px;
+}
+.flex-caption.custom-caption h2{
+    background: none;
+    font-size: 35px;
+    margin: 0;
+    padding: 0;
+}
+.flex-caption.custom-caption .excerpt{
+    background: none;
+    max-width: 100%;
+}
+.flex-control-paging li a{
+    background: rgba(1, 152, 171, 0.5);
+    box-shadow: 0 0 3px rgba(1, 152, 171, 0.3) inset;
+}
+.flex-control-paging li a.flex-active{
+    background: rgba(1, 152, 171, 0.9);
+}
+
+
+
 
 
 

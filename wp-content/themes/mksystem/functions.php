@@ -166,11 +166,12 @@ function devit_featured_slider() {
                 if ( has_post_thumbnail() ) { // Check if the post has a featured image assigned to it.
                   the_post_thumbnail('full');
                 }
-                echo '<div class="flex-caption">';
-                  echo '<a href="'. get_permalink() .'">';
+                echo '<div class="flex-caption custom-caption">';
+                  //echo '<a href="'. get_permalink() .'">';
+                  echo '<div class="text-center">';
                     if ( get_the_title() != '' ) echo '<h2 class="entry-title">'. get_the_title().'</h2>';
                     if ( get_the_excerpt() != '' ) echo '<div class="excerpt">' . get_the_excerpt() .'</div>';
-                  echo '</a>';
+                  echo '</div>';
                 echo '</div>';
 
                 endwhile;
