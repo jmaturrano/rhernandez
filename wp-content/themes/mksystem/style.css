@@ -261,16 +261,27 @@ padding-left: 0px;
 
 
 
+
+
+
+
+/* estilo contact*/
 .wpcf7-form {
     border: 1px solid #ccc;
     margin: 0 auto;
     padding: 30px;
-    width: 70%;
-
-
-    font-family: "Advent Pro",sans-serif !important;
+    width: 60%;
 }
 
+/* estilo label contact*/
+.wpcf7-form label {
+    color: gray;
+    font-size: 17px;
+    font-weight: 100;
+    text-transform: none;
+}
+
+/* text form contacto adaptarse */
 input[type="text"], 
 input[type="email"],
 textarea{
