@@ -259,3 +259,22 @@ padding-left: 0px;
     opacity: 1;
 }
 
+
+
+.wpcf7-form {
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    padding: 30px;
+    width: 70%;
+
+
+    font-family: "Advent Pro",sans-serif !important;
+}
+
+input[type="text"], 
+input[type="email"],
+textarea{
+ /*   background-color: red;
+    padding: 3px;*/
+    width: 100%;
+}
