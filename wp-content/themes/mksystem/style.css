@@ -271,6 +271,7 @@ padding-left: 0px;
     margin: 0 auto;
     padding: 30px;
     width: 60%;
+
 }
 
 /* estilo label contact*/
@@ -279,6 +280,7 @@ padding-left: 0px;
     font-size: 17px;
     font-weight: 100;
     text-transform: none;
+    font-family: "MyriadPro-Regular";
 }
 
 /* text form contacto adaptarse */
@@ -289,3 +291,19 @@ textarea{
     padding: 3px;*/
     width: 100%;
 }
+
+/* tipo letra boton contact*/
+input[type="submit"]{
+  font-family: "MyriadPro-Regular";
+}
+  
+
+
+
+
+
+
+
+
+
+
