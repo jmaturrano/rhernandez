@@ -63,6 +63,7 @@ a{
 .scroll-to-top:hover{
     background: #0198AB;
 }
+.site-main [class*="navigation"] a:hover, .more-link:hover{ background: #0198AB;}
 
 
 /*
