@@ -260,3 +260,51 @@ padding-left: 0px;
     opacity: 1;
 }
 
+
+
+
+
+
+
+/* estilo contact*/
+.wpcf7-form {
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    padding: 30px;
+    width: 60%;
+
+}
+
+/* estilo label contact*/
+.wpcf7-form label {
+    color: gray;
+    font-size: 17px;
+    font-weight: 100;
+    text-transform: none;
+    font-family: "MyriadPro-Regular";
+}
+
+/* text form contacto adaptarse */
+input[type="text"], 
+input[type="email"],
+textarea{
+ /*   background-color: red;
+    padding: 3px;*/
+    width: 100%;
+}
+
+/* tipo letra boton contact*/
+input[type="submit"]{
+  font-family: "MyriadPro-Regular";
+}
+  
+
+
+
+
+
+
+
+
+
+
