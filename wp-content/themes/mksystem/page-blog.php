@@ -10,7 +10,7 @@ get_header(); ?>
 <div id="content" class="site-content container">
 	<div id="primary" class="content-area col-md-8">
 		<main id="main" class="site-main" role="main">
-		<?php query_posts('cat=6&paged='. $paged); ?>
+		<?php query_posts('cat=7&paged='. $paged); ?>
      	<h2 style="text-align:center;" ><?php the_title(); ?></h2>
 
 
@@ -34,40 +34,40 @@ get_header(); ?>
 
 <div class="col-sm-12">
 
-<!-- el indicador de paginacion -->
-<?php $max_page = $wp_query->max_num_pages;
-if (!$paged && $max_page >= 1) {
-    $current_page = 1;
-}
-else {
-    $current_page = $paged;
-} ?>
+	<!-- el indicador de paginacion -->
+	<?php $max_page = $wp_query->max_num_pages;
+	if (!$paged && $max_page >= 1) {
+	    $current_page = 1;
+	}
+	else {
+	    $current_page = $paged;
+	} ?>
 
-<div class="page-nav fix">
-	<div>
-	    <span class="pag">
-      
-		<?php echo paginate_links(array(
-		"base" => add_query_arg("paged", "%#%"),
-		"format" => '',
-		"type" => "plain",
-		"total" => $max_page,
-		"current" => $current_page,
-		"show_all" => false,
-		"end_size" => 2,
-		"mid_size" => 2,
-		"prev_next" => true,
-		"next_text" => __('Anteriores'),
-		"prev_text" => __('Recientes'),
-		)); ?>
-		
-		<?php wp_reset_query(); ?>
-	    </span>
+	<div class="page-nav fix">
+		<div>
+			    <span class="pag">
+		      
+				<?php echo paginate_links(array(
+				"base" => add_query_arg("paged", "%#%"),
+				"format" => '',
+				"type" => "plain",
+				"total" => $max_page,
+				"current" => $current_page,
+				"show_all" => false,
+				"end_size" => 2,
+				"mid_size" => 2,
+				"prev_next" => true,
+				"next_text" => __('Anteriores'),
+				"prev_text" => __('Recientes'),
+				)); ?>
+				
+				<?php wp_reset_query(); ?>
+			    </span>
+		</div>
+
+	      <span class="page-index"><?php printf(__('Pagina %1$s de %2$s'), $current_page, $max_page); ?></span>
+	      
 	</div>
-
-
-      <span class="page-index"><?php printf(__('Pagina %1$s de %2$s'), $current_page, $max_page); ?></span>
-</div>
 </div>
 
 <?php get_footer(); ?>
