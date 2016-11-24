@@ -8,12 +8,16 @@
  */
 get_header(); ?>
 <div id="content" class="site-content container">
-	<div id="primary" class="content-area row">
+	<div id="primary" class="content-area col-md-8">
 		<main id="main" class="site-main" role="main">
+		<?php query_posts('cat=6&paged='. $paged); ?>
+     	<h2 style="text-align:center;" ><?php the_title(); ?></h2>
+
+
 		<?php //query_posts('cat=6&paged='. $paged); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'contents/content', 'servicios' ); ?>
+				<?php get_template_part( 'contents/content', 'blog' ); ?>
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template
@@ -28,7 +32,7 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 
-
+<div class="col-sm-12">
 
 <!-- el indicador de paginacion -->
 <?php $max_page = $wp_query->max_num_pages;
@@ -64,6 +68,6 @@ else {
 
       <span class="page-index"><?php printf(__('Pagina %1$s de %2$s'), $current_page, $max_page); ?></span>
 </div>
-
+</div>
 
 <?php get_footer(); ?>
