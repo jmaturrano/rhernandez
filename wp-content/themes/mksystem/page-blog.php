@@ -8,10 +8,10 @@
  */
 get_header(); ?>
 <div id="content" class="site-content container">
-	<div id="primary" class="content-area col-md-8">
+	<div id="primary" class="content-area col-md-10 col-md-offset-1">
 		<main id="main" class="site-main" role="main">
 		<?php query_posts('cat=7&paged='. $paged); ?>
-     	<h2 style="text-align:center;" ><?php the_title(); ?></h2>
+     	<h2 class="titulo_blog" style="text-align:center;" ><?php the_title(); ?></h2>
 
 
 		<?php //query_posts('cat=6&paged='. $paged); ?>
