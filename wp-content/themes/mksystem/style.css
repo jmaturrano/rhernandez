@@ -210,7 +210,7 @@ a{
     padding: 3px 8px 0 11px;
 }
 .page-index {
-    background: #1DD2E2;
+   /* background: #1DD2E2;*/
 }
 .cubretodo{
   width: 100%!important;
@@ -300,7 +300,10 @@ input[type="submit"]{
   
 
 
-
+.titulo_blog{
+color: #0198AB;
+    
+}
 
 
 

@@ -35,34 +35,89 @@ get_header(); ?>
 
         <div class="row <?php echo $layout_class; ?>">
 
-        <div id="primary" class="content-area col-sm-12 col-md-8">
-                <main id="main" class="site-main" role="main">
+    <div id="contenedor_post">
 
-                <?php if ( have_posts() ) : ?>
+        <!-- cat 6 ==> principales -->
+        <?php query_posts('cat=6&paged='. $paged); ?>
+        <h2 style="text-align:center;"  >POST PRINCIPALES</h2>
 
-                        <?php /* Start the Loop */ ?>
-                        <?php while ( have_posts() ) : the_post(); ?>
 
-                                <?php
-                                        /* Include the Post-Format-specific template for the content.
-                                         * If you want to override this in a child theme, then include a file
-                                         * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                                         */
-                                        get_template_part( 'content', get_post_format() );
-                                ?>
 
-                        <?php endwhile; ?>
 
-                        <?php dazzling_paging_nav(); ?>
+        <?php while (have_posts()) : the_post();?>
 
-                <?php else : ?>
+            <div id="post <?php  the_ID(); ?>" class="content-area col-sm-4 col-md-4">
 
-                        <?php get_template_part( 'content', 'none' ); ?>
 
-                <?php endif; ?>
 
-                </main><!-- #main -->
-        </div><!-- #primary -->
+                  <?php get_template_part( 'content', '' ); ?>
+                  <?php
+                      // If comments are open or we have at least one comment, load up the comment template
+                      if ( comments_open() || '0' != get_comments_number() ) :
+                        comments_template();
+
+
+                      endif;
+                    ?>
+            </div>
+
+        <?php endwhile; ?>      <!-- fin while -->
+
+
+    </div>  <!-- fin id="contenedor_post" --> 
+
+<div class="col-sm-12">
+
+    <!-- el indicador de paginacion -->
+    <?php $max_page = $wp_query->max_num_pages;
+    if (!$paged && $max_page >= 1) {
+        $current_page = 1;
+    }
+    else {
+        $current_page = $paged;
+    } ?>
+
+    <div class="page-nav fix">
+        <div>
+                <span class="pag">
+              
+                <?php echo paginate_links(array(
+                "base" => add_query_arg("paged", "%#%"),
+                "format" => '',
+                "type" => "plain",
+                "total" => $max_page,
+                "current" => $current_page,
+                "show_all" => false,
+                "end_size" => 2,
+                "mid_size" => 2,
+                "prev_next" => true,
+                "next_text" => __('Anteriores'),
+                "prev_text" => __('Recientes'),
+                )); ?>
+                
+                <?php wp_reset_query(); ?>
+                </span>
+        </div>
+
+          <span class="page-index"><?php printf(__('Pagina %1$s de %2$s'), $current_page, $max_page); ?></span>
+          
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
