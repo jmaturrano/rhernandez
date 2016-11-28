@@ -7,12 +7,88 @@
 
 
 
+/*
+    MK System
+*/
+function get_template_directory_child(){
+  $directory_template = get_template_directory_uri();
+  $directory_child = str_replace('dazzling', '', $directory_template).'mksystem';
+  return $directory_child;
+}
+
+
+if ( ! class_exists( 'WP_Customize_Control' ) )
+    return NULL;
+/**
+ * Class to create a Devit important links
+ */
+class Devit_Important_Links extends WP_Customize_Control {
+
+   public $type = "devit-important-links";
+   public function render_content() {?>
+         <!-- Twitter -->
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+        <!-- Facebook -->
+        <div id="fb-root"></div>
+        <script>
+            (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=328285627269392";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        <div class="inside">
+            <div id="social-share">
+              <div class="fb-like" data-href="<?php echo esc_url( 'https://www.facebook.com/DEVIT-Web-Multimedia-103217020151136' ); ?>" data-send="false" data-layout="button_count" data-width="90" data-show-faces="true"></div>
+              <div class="tw-follow" ><a href="https://twitter.com/devitweb1" class="twitter-follow-button" data-show-count="false">Follow @devitweb1</a></div>
+            </div>
+            <p>Siempre puede contactarnos a través de nuestra web <a target="_blank" href="http://devitweb.com">devitweb.com</a>, al correo <a href="mailto:atencionalcliente@devitweb.com">atencionalcliente@devitweb.com</a> o al teléfono (01)504-7698</p>
+            <p>Puedes seguirnos en los siguientes:</p>
+            <ul>
+              <li><a class="button" href="<?php echo esc_url( 'http://www.facebook.com/DEVIT-Web-Multimedia-103217020151136' ); ?>" title="Danos Me gusta en Facebook" target="_blank"><?php printf(esc_html__('Like en Facebook','dazzling')); ?></a></li>
+              <li><a class="button" href="<?php echo esc_url( 'http://twitter.com/devitweb1/' ); ?>" title="Síguenos como Devit Web en Twitter" target="_blank">Síguenos en Twitter</a></li>
+            </ul>
+        </div><?php
+   }
+
+}
 
 
 function mksystem_customizer_register( $wp_customize ) {
+
   /*remove widgets*/
   $wp_customize->remove_panel('widgets');
   $wp_customize->remove_panel('header_image');
+  $wp_customize->remove_section('dazzling_important_links');
+
+
+  /*soporte y documentacion*/
+  $wp_customize->add_section('devit_support', array(
+      'priority' => 5,
+      'title' => 'Soporte y documentación'
+  ));
+  $wp_customize->add_setting('devit_important_links', array(
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+  $wp_customize->add_control(
+    new Devit_Important_Links(
+      $wp_customize,
+        'devit_important_links', array(
+        'section' => 'devit_support',
+        'type' => 'devit-important-links'
+      )
+    )
+  );
+
+  /* Identidad del sitio */
+  $wp_customize->get_section('title_tagline')->priority = 6;
+
+  /* Imagen de la cabecera */
+  $wp_customize->get_section('header_image')->priority = 7;
 
   /* Slider main */
   $wp_customize->add_section('devit_slider_options', array(
@@ -227,6 +303,40 @@ function mksystem_customizer_register( $wp_customize ) {
 
 }
 add_action('customize_register','mksystem_customizer_register');
+
+
+
+/*
+ * Custom Scripts
+ */
+add_action( 'customize_controls_print_footer_scripts', 'devit_custom_scripts' );
+function devit_custom_scripts() { ?>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        /* This one shows/hides the an option when a checkbox is clicked. */
+    });
+</script>
+<style>
+    li#accordion-section-dazzling_important_links, 
+    li#accordion-panel-dazzling_main_options{ 
+      display: none !important;
+    }
+    li#accordion-section-devit_support h3.accordion-section-title, 
+    li#accordion-section-devit_support h3.accordion-section-title:focus { 
+      background-color: #46A2A1 !important;
+      color: #fff !important;
+    }
+    li#accordion-section-devit_support h3.accordion-section-title:hover { 
+      background-color: #46A2A1 !important;
+      color: #fff !important;
+    }
+    li#accordion-section-devit_support h3.accordion-section-title:after { 
+      color: #fff !important;
+    }
+</style>
+<?php
+}
+
 
 
 function devit_custom_header_setup() {
