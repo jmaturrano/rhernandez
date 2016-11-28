@@ -63,7 +63,7 @@ function mksystem_customizer_register( $wp_customize ) {
   /*remove widgets*/
   $wp_customize->remove_panel('widgets');
   $wp_customize->remove_panel('header_image');
-  $wp_customize->remove_section('dazzling_important_links');
+
 
 
   /*soporte y documentacion*/
@@ -301,6 +301,88 @@ function mksystem_customizer_register( $wp_customize ) {
 
 
 
+ $wp_customize->add_section('mksystem_social',array(
+            'title' => __('Social options', 'mksystem'),
+            'description'=> __('', 'mksystem'),
+            'priority' => 100,
+            
+        )
+    );
+  /* Colocar acceso de imagenes para : social*/
+  $wp_customize->add_setting('social_facebook',array(
+    'default' => __(' ','mksystem')
+  ));
+  $wp_customize->add_control('social_facebook',array(
+    'label' => __('Facebook','mksystem'),
+    'section' => 'mksystem_social',
+    'setting' => 'social_facebook',
+    'type'    => 'text'
+  ));
+
+ 
+
+
+$wp_customize->add_setting('social_twitter',array(
+    'default' => __('','mksystem')
+  ));
+  $wp_customize->add_control('social_twitter',array(
+    'label' => __('Twitter','mksystem'),
+    'section' => 'mksystem_social',
+    'setting' => 'social_twitter',
+    'type'    => 'text'
+  ));
+  /* Colocar acceso de imagenes para : social*/
+
+
+   
+  $wp_customize->remove_panel('header_image');
+ 
+
+   $wp_customize->add_setting('social_youtube',array(
+    'default' => __('','mksystem')
+  ));
+  $wp_customize->add_control('social_youtube',array(
+    'label' => __('Youtube','mksystem'),
+    'section' => 'mksystem_social',
+    'setting' => 'social_youtube',
+    'type'    => 'text'
+  ));
+
+   $wp_customize->add_setting('social_instagram',array(
+    'default' => __('','mksystem')
+  ));
+  $wp_customize->add_control('social_instagram',array(
+    'label' => __('Instagram','mksystem'),
+    'section' => 'mksystem_social',
+    'setting' => 'social_instagram',
+    'type'    => 'text'
+  ));
+
+    $wp_customize->add_setting('social_googleplus',array(
+    'default' => __('','mksystem')
+  ));
+  $wp_customize->add_control('social_googleplus',array(
+    'label' => __('Googleplus','mksystem'),
+    'section' => 'mksystem_social',
+    'setting' => 'social_googleplus',
+    'type'    => 'text'
+  ));
+
+   $wp_customize->add_setting('social_linkedin',array(
+    'default' => __('','mksystem')
+  ));
+  $wp_customize->add_control('social_linkedin',array(
+    'label' => __('Linkedin','mksystem'),
+    'section' => 'mksystem_social',
+    'setting' => 'social_linkedin',
+    'type'    => 'text'
+  ));
+
+  /* Colocar acceso de imagenes para : social*/
+  
+
+
+
 }
 add_action('customize_register','mksystem_customizer_register');
 
@@ -365,12 +447,12 @@ add_action('wp_footer','devit_header_scripts', 100);
 
 
 function devit_social_icons(){
-  $social_facebook = 'http://facebook.com';
-  $social_twitter = 'http://twitter.com';
-  $social_youtube = 'http://youtube.com';
-  $social_instagram = 'http://instagram.com';
-  $social_googleplus = 'http://googleplus.com';
-  $social_linkedin = 'http://linkedin.com';
+  $social_facebook = get_theme_mod('social_facebook');
+  $social_twitter = get_theme_mod('social_twitter');
+  $social_youtube = get_theme_mod('social_youtube');
+  $social_instagram = get_theme_mod('social_instagram');
+  $social_googleplus = get_theme_mod('social_googleplus');
+  $social_linkedin = get_theme_mod('social_linkedin');
   ?>
           <ul>
             <?php if($social_facebook != ''): ?>
@@ -425,6 +507,8 @@ function devit_social_icons(){
   <?php
 }
 
+ 
+ 
 
 
 
@@ -488,3 +572,7 @@ function devit_featured_slider() {
 function mksystem_footer_info() {
   echo "<span>©&nbsp;".get_bloginfo('name')." ".date('Y').'&nbsp;-&nbsp;</span><div id="devit_author"></div>';
 }
+
+
+
+

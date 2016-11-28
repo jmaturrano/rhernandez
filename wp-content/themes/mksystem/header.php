@@ -63,7 +63,8 @@
 					</div><!--.title-logo-->
 				</div><!--.col-md-4-->
 				<div class="col-md-5 social-icon text-right">
-					<?php devit_social_icons(); ?>
+					<?php devit_social_icons();  ?>
+
 				</div>
 				<div class="col-md-3 custom-form">
 					<?php get_search_form(); ?>
