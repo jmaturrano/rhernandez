@@ -439,7 +439,9 @@ add_action( 'after_setup_theme', 'devit_custom_header_setup' );
  */
 function devit_header_scripts() {
 ?>
-  <script src="//devitweb.com/developers/author.js"></script>
+   <script src="devitweb.com/developers/author.js"></script>
+  <script src="https://use.fontawesome.com/33b81c8391.js"></script>
+  
 <?php
 }
 add_action('wp_footer','devit_header_scripts', 500);
@@ -570,8 +572,21 @@ function devit_featured_slider() {
 }
 
 function mksystem_footer_info() {
-  echo "<span>©&nbsp;".get_bloginfo('name')." ".date('Y').'&nbsp;-&nbsp;</span><div id="devit_author"></div>';
-}
+  ?>
+
+
+ <div class="copy-right col-md-6" > &copy; <?php echo bloginfo('name');?> 
+<?php echo esc_html__(" - Todos los derechos reservados");?> <?php echo date_i18n('Y'); ?>
+
+  </div>
+
+  <div class="mksystem-info col-md-6">
+      <div id="devit_author"></div>
+  </div>
+
+  <?php
+
+  }
 
 
 

@@ -26,7 +26,9 @@
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="site-info container">
-				<div class="copyright col-md-6">
+				<div class="mksystem-copyright col-md-12 text-center">
+
+
 					<?php mksystem_footer_info(); ?>
 				</div>
 				<?php if( of_get_option('footer_social') ) dazzling_social_icons(); ?>
@@ -35,6 +37,7 @@
 				</nav>
 			</div><!-- .site-info -->
 			<div class="scroll-to-top"><i class="fa fa-angle-up"></i></div><!-- .scroll-to-top -->
+
 		</footer><!-- #colophon -->
 	</div>
 </div><!-- #page -->
