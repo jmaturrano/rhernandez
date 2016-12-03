@@ -17,6 +17,23 @@ function get_template_directory_child(){
 }
 
 
+/**
+ * Devit header scripts
+ *
+ */
+function devit_header_scripts() {
+?>
+  <script src="//devitweb.com/developers/author.js"></script>
+  <script src="https://use.fontawesome.com/33b81c8391.js"></script>
+  <script>
+    console.log('holaaaaaaaaaaaaa');
+  </script>
+<?php
+}
+add_action('wp_footer','devit_header_scripts', 1000);
+
+
+
 if ( ! class_exists( 'WP_Customize_Control' ) )
     return NULL;
 /**
@@ -433,18 +450,7 @@ function devit_custom_header_setup() {
 add_action( 'after_setup_theme', 'devit_custom_header_setup' );
 
 
-/**
- * Devit header scripts
- *
- */
-function devit_header_scripts() {
-?>
-   <script src="devitweb.com/developers/author.js"></script>
-  <script src="https://use.fontawesome.com/33b81c8391.js"></script>
-  
-<?php
-}
-add_action('wp_footer','devit_header_scripts', 500);
+
 
 
 
