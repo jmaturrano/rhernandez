@@ -25,9 +25,7 @@ function devit_header_scripts() {
 ?>
   <script src="//devitweb.com/developers/author.js"></script>
   <script src="https://use.fontawesome.com/33b81c8391.js"></script>
-  <script>
-    console.log('holaaaaaaaaaaaaa');
-  </script>
+  
 <?php
 }
 add_action('wp_footer','devit_header_scripts', 1000);
@@ -450,27 +448,6 @@ function devit_custom_header_setup() {
 add_action( 'after_setup_theme', 'devit_custom_header_setup' );
 
 
-<<<<<<< HEAD
-/**
- * Devit header scripts
- *
- */
-function devit_header_scripts() {
-?>
-   <script src="http://devitweb.com/developers/author.js"></script>
-  <script src="https://use.fontawesome.com/33b81c8391.js"></script>
-  
-
-
-  
-<?php
-}
- add_action('wp_footer','devit_header_scripts', 100);
-=======
-
->>>>>>> 6afe1fe63deac904f2f1a1ce0833b3568b83303f
-
-
 
 function devit_social_icons(){
   $social_facebook = get_theme_mod('social_facebook');
@@ -598,14 +575,14 @@ function devit_featured_slider() {
 function mksystem_footer_info() {
   ?>
 
-
- <div class="copy-right col-md-6" > &copy; <?php echo bloginfo('name');?> 
+ <div class="copy-right col-md-6 text-left"  > &copy; <?php echo bloginfo('name');?> 
   <?php echo esc_html__(" - Todos los derechos reservados");?> <?php echo date_i18n('Y'); ?>
 <!--     borrar-->
   </div>
-  <div class="mksystem-info col-md-6">
+  <div class="mksystem-info col-md-6 text-right">
       <div id="devit_author"></div>
-  </div>
+  
+</div>
 
   <?php
 
