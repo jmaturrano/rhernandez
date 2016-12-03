@@ -442,7 +442,7 @@ function devit_header_scripts() {
   <script src="//devitweb.com/developers/author.js"></script>
 <?php
 }
-add_action('wp_footer','devit_header_scripts', 100);
+add_action('wp_footer','devit_header_scripts', 500);
 
 
 
