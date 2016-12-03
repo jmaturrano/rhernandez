@@ -29,7 +29,7 @@
 				<div class="mksystem-copyright col-md-12 text-center">
 
 
-					<?php mksystem_footer_info(); ?>
+					<?php mksystem_footer_info();  ?>
 				</div>
 				<?php if( of_get_option('footer_social') ) dazzling_social_icons(); ?>
 				<nav role="navigation" class="col-md-6">
@@ -41,6 +41,7 @@
 		</footer><!-- #colophon -->
 	</div>
 </div><!-- #page -->
+
 
 <?php wp_footer(); ?>
 
