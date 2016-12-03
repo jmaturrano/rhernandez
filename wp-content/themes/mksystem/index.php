@@ -39,7 +39,7 @@ get_header(); ?>
 
         <!-- cat 6 ==> principales -->
         <?php query_posts('cat=6&paged='. $paged); ?>
-        <h2 style="text-align:center;"  >POST PRINCIPALES</h2>
+        <h2 style="text-align:center;"  >ULTIMAS NOTICIAS</h2>
 
 
 
