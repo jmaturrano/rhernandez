@@ -77,8 +77,8 @@ get_header(); ?>
         $current_page = $paged;
     } ?>
 
-    <div class="page-nav fix">
-        <div>
+    
+      <!--  <div>   
                 <span class="pag">
               
                 <?php echo paginate_links(array(
@@ -93,16 +93,27 @@ get_header(); ?>
                 "prev_next" => true,
                 "next_text" => __('Anteriores'),
                 "prev_text" => __('Recientes'),
+
+
+
                 )); ?>
                 
                 <?php wp_reset_query(); ?>
                 </span>
         </div>
 
-          <span class="page-index"><?php printf(__('Pagina %1$s de %2$s'), $current_page, $max_page); ?></span>
-          
-    </div>
+            -->
+            <div >
+<ul class="pagination">
+  <li ><a href="?paged=1">&laquo;</a></li>
+  <li class="active"><a href="?paged=1">1</a></li>
+  <li><a href="?paged=2">2</a></li>
+  <li><a href="?paged=2">&raquo;</a></li>
+</ul>
 </div>
+          <span class="page-index"><?php printf(__('Pagina %1$s de %2$s'), $current_page, $max_page); ?></span>
+       
+    
 
 
 
