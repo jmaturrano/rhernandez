@@ -8,9 +8,9 @@
  */
 get_header(); ?>
 
-<div id="content" class="site-content container">
-	<div id="primary" class="content-area row">
-		<main id="main" class="site-main" role="main">
+<div id="content" class="site-content container" >
+	<div id="primary" class="content-area row" >
+		<main id="main" class="site-main" role="main" style="min-heigth=100px">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 

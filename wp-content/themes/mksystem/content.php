@@ -35,7 +35,7 @@
 
 <!--=== es la cabecera de la entrada ====-->
 
-	<div class="entry-header page-header">
+	<div class="entry-header page-header" >
 
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
@@ -90,7 +90,7 @@
 		<?php else : ?>
 			<?php the_excerpt(); ?>
 		<?php endif; ?>
-		<p><a class="btn btn-default read-more" href="<?php the_permalink(); ?>"><?php _e( 'Continue reading', 'dazzling' ); ?> <i class="fa fa-chevron-right"></i></a></p>
+		<p><a class="btn btn-default read-more" href="<?php the_permalink(); ?>"><?php _e( 'Leer mas', 'dazzling' ); ?> <i class="fa fa-chevron-right"></i></a></p>
 
 		<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"></a>
 
